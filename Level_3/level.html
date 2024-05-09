@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <title>Slide Puzzle</title>
+        <link rel="stylesheet" href="puzzle.css">
+        <script src="puzzle.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+            <div class="topTexts">
+                <button class="return" onclick="window.location.replace('../level_select.html')"> RETURN TO LEVEL SELECT </button>
+                <h1 id="title">SOLVE!</h1>
+                <h1 id="turns_text">Turns: <span id="turns">0</span></h1>
+            </div>
+            <span>
+            <div id="board"></div>
+            <img id="full_img" src="10.jpg" alt="full image" style="display: none;">
+            </span>
+            <span id="learn_more" style="display: none;">
+                <a href="nextpage.html">LEARN MORE</a>
+            </span>
+            <span style="color: rgba(255, 255, 255, 0.264); font-style: italic;; font-size: 15px;">source: https://thekootneeti.in/2020/11/26/the-philippine-revolution-and-role-of-filipinas/</span>
+    </body>
+</html>
