@@ -1,0 +1,54 @@
+* {
+    font-family: "Oswald";
+}
+
+body {
+    background-color: #bc122c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 300%;
+}
+
+.container {
+    font-size: 150%;
+    text-align: center;
+    color: white;
+    background-color: #082B58;
+    max-width: 500px;
+    padding: 20px;
+}
+
+.return {
+    margin-top: 10px;
+    width: 20vw;
+    border: none;
+    padding: 1em;
+    background-color: #f7b62d;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 600px) {
+    * {
+        overflow-x: hidden;
+    }
+
+    .return {
+        width: 50vw;
+    }
+
+    .container {
+        width: 100vw;
+        font-size: 95%;
+    }
+}
+

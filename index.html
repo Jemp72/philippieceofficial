@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Code Authentication</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            overflow: hidden;
+        }
+
+        body {
+            font-family: "Oswald";
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #082B58;
+            text-align: center;
+        }
+        #form-container {
+            background-color: #bc122c;
+            padding: 20px;
+            border-radius: 8px;
+            width: 80vh;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        label {
+            color: white;
+            font-size: 50px;
+        }
+
+        input {
+            font-size: 30px;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        #message {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .success {
+            color: rgb(255, 255, 255);
+        }
+        .error {
+            color: rgb(255, 255, 255);
+        }
+    </style>
+</head>
+<body>
+    <div id="form-container">
+        <form id="access-form">
+            <label for="code">Enter Access Code:</label><br>
+            <input type="text" id="code" name="code" maxlength="6" ><br>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="message"></div>
+    </div>
+
+    <script>
+        window.history.forward(); 
+        function noBack() { 
+            window.history.forward(); 
+        } 
+        
+        const codesArray = [
+            "nQd3Zs", "gYt9Ak", "mPw7Qr", "vRc5Xe", "bFu2Hj",
+            "kIv8Mo", "pLy6Gf", "uTq4Vm", "zAw1Do", "hEx0Ki",
+            "sJz3Yl", "wNv5Fu", "cGq7Pr", "lHr9Uk", "oIt2Ne",
+            "xKw6Bm", "dHo4Rc", "yFn8Lv", "qMp0Ts", "eCu5Zr",
+            "rDx1Va", "iAv9Gj", "tBm3Wo", "fVp6Xu", "aYl2Nk",
+            "mTc7Zs", "uHw9Gi", "pQr4Ke", "nJo1Bl", "gWf0Vx",
+            "bLs5Cq", "xVz8Dp", "kNv6Hl", "hMg3Ta", "cRt7Pu",
+            "wFh2Ye", "dXq5Jo", "zPw4Mi", "sYr9Vx", "eDv1Lu",
+            "aTq0No", "lWk8Xs", "oCz6Gm", "tFx3Yd", "vIp2Rg",
+            "iGm9Hx", "rBa7Tk", "qKv4Ze", "yVp5Ci", "uHt8Lo",
+            "nPj6Fu", "xWc1Ye", "mQo3Va", "bUf0Kr", "zZs2Gx",
+            "fEw4Jl", "gLy7Td", "kNq9Ri", "hOv5Xa", "cXp1Sm",
+            "wYj8Pe", "dGm4Ro", "vFz6Bu", "aHx0Lk", "tJc3Pi",
+            "sQo7Zs", "lZv5Gw", "oWt1Me", "eAr9Do", "xIq4Jl",
+            "iXs3Na", "rTz8Qk", "pKd7Xo", "nPm2Tu", "gUv9Yj",
+            "bQh6Wr", "zVp5De", "fWo0Ki", "cBx3Uq", "wFj8Ra",
+            "dGy7Xs", "vNt4Mu", "aZp1Go", "tQk6Zf", "sDf0Hr",
+            "lOv9Lx", "oXq5Nc", "hCm8Ye", "uWz3Pi", "yRg2Jo",
+            "iJl7Wu", "rVx1Na", "pLz5Gd", "nQw3Ke", "gHs6To",
+            "bKt9Wf", "zCf8Yl", "fPq2Sr", "cMj4Ux", "wGx7Zk"
+        ];
+
+        const form = document.getElementById('access-form');
+        const messageDiv = document.getElementById('message');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const enteredCode = document.getElementById('code').value.trim();
+            if (codesArray.includes(enteredCode)) {
+                showMessage('Success! Redirecting...', 'success');
+                setTimeout(function(){
+                    window.location.assign("menu.html");
+                }, 5000);
+            } else {
+                showMessage('Error! Invalid access code.', 'error');
+            }
+        });
+
+        function showMessage(message, messageType) {
+            messageDiv.textContent = message;
+            messageDiv.className = messageType;
+        }
+    </script>
+</body>
+</html>

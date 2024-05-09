@@ -1,0 +1,67 @@
+* {
+    overflow: hidden;
+    text-decoration: none;
+    color: black;
+}
+body {
+    background-image: url(Background_desktop.svg);
+    background-size: cover;
+    font-family: "Oswald";
+    height: 100vh;
+}
+
+p {
+  margin-bottom: 10vh;
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
+
+.container {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    margin: 1vw;
+}
+
+button {
+    font-size: 3vh;
+    width: 30vw;
+    height: 20vh;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+button:hover {
+    background-color: #f7b62d;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+  
+  button:active {
+    transform: translateY(-1px);
+  }
+
+  #Home {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #f7b62d;
+    border-radius: 20px;
+    width: 50vw;
+  }
+
+  @media screen and (max-width: 600px) {
+    button {
+      font-size: 2vh;
+    }
+  }

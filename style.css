@@ -1,0 +1,57 @@
+* {
+    overflow: hidden;
+    text-decoration: none;
+    color: black;
+}
+body {
+    background-image: url(Background_desktop.svg);
+    background-size: cover;
+    font-family: "Oswald";
+    height: 100vh;
+}
+
+.title {
+    text-align: center;
+    color: white;
+    width: 80vw;
+    max-width: 25em;
+    margin-bottom: 20vh;
+    
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    margin: 1em;
+}
+
+button {
+    border: 20px black;
+    width: 15em;
+    padding: 1em 2em;
+    font-size: 20px;
+    font-weight: bold;
+    color: #4b4b4b;
+    background-color: #fff;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #f7b62d;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+  
+  button:active {
+    transform: translateY(-1px);
+  }
+

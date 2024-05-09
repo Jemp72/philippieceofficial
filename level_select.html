@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="level_select.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script>
+        window.history.forward(); 
+        function noBack() { 
+            window.history.forward(); 
+        } 
+    </script>
+    <p class="title">SELECT LEVEL</p>
+    <div class="container">
+        <button class="level_1" onclick="window.location.replace('Level_1/level.html')"><strong>THE BATTLE OF MACTAN</strong> <br> (1521)</button>
+        <button class="level_2" onclick="window.location.replace('Level_2/level.html')"><strong style="font-size: 95%;">SPANISH COLONIZATION</strong> <br> (1565)</button>
+        <button class="level_3" onclick="window.location.replace('Level_3/level.html')"><strong>PHILIPPINE REVOLUTION</strong> <br> (1896)</button>
+    </div>
+    <div class="container">
+        <button class="level_4" onclick="window.location.replace('Level_4/level.html')"><strong>PHILIPPINE-AMERICAN WAR</strong> <br> (1899)</button>
+        <button class="level_5" onclick="window.location.replace('Level_5/level.html')"><strong>JAPANESE OCCUPATION</strong> <br> (1942)</button>
+        <button class="level_6" onclick="window.location.replace('Level_6/level.html')"><strong style="font-size: 93%;">PHILIPPINE INDEPENDENCE</strong> <br> (1946)</button>
+    </div>
+    <a id="Home" href="menu.html" style="text-align: center;">Home</a>
+</body>
+</html>
